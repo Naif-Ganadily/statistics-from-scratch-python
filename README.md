@@ -62,6 +62,13 @@ statsfs/
     regression.py          # linear regression
   utils/
     validation.py          # input checking
+  experiments/
+    descriptive.ipynb
+    probability.ipynb
+    inference.ipynb
+    models.ipynb
+      data/
+    
 
 tests/
   test_central_tendency.py
