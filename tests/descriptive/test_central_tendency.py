@@ -1,6 +1,7 @@
 import pytest
 from statsfs.descriptive.central_tendency import mean
 from statsfs.descriptive.central_tendency import median
+from statsfs.descriptive.central_tendency import midrange
 
 # Mean Unit Tests:
 def test_mean_integers():
@@ -42,3 +43,18 @@ def test_median_empty():
 def test_median_non_numeric():
     with pytest.raises(TypeError, match="Non-numeric"):
         median(["Naif", "Yash", 5])
+
+# Midrange Unit Tests:
+        
+def test_midrange_integers():
+    assert midrange([1, 2, 3, 4, 5]) == 3
+
+def test_midrange_floats():
+    assert midrange([1.0, 2.0, 3.0]) == 2.0
+
+def test_midrange_mixed():
+    assert midrange([1.5, 4, 2.5, 3, 10.5]) == 6
+
+def test_midrange_non_numeric():
+    with pytest.raises(TypeError, match="Non-numeric"):
+        midrange(["Naif", "Yash", 5])

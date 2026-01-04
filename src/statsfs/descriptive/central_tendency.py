@@ -104,3 +104,12 @@ def median(x):
     n = len(nums)
     middle = n // 2
     return nums[middle] if n % 2 else (nums[middle - 1] + nums[middle]) / 2
+
+# First attempt on the Midrange Feature 
+# Works !
+def midrange(x):
+    if not x: raise ValueError("Empty List")
+    for i in x:
+        if not isinstance(i, (int, float)):
+            raise TypeError(f"Non-numeric: {i}")
+    return (max(x) + min(x)) / 2
